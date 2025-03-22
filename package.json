@@ -4,8 +4,9 @@
   "description": "Cursor Talk to Figma MCP",
   "main": "src/socket.ts",
   "scripts": {
-    "setup": "./scripts/setup.sh",
-    "start": "bun run src/socket.ts"
+    "setup": "powershell -ExecutionPolicy Bypass -File scripts/setup.ps1",
+    "start": "ts-node src/socket.ts",
+    "build": "tsc"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "latest",
@@ -15,6 +16,9 @@
     "zod": "latest"
   },
   "devDependencies": {
-    "@types/ws": "^8.18.0"
+    "@types/node": "^20.11.28",
+    "@types/ws": "^8.18.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.2"
   }
 }
